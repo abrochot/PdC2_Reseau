@@ -1,0 +1,62 @@
+\documentclass[a4paper]{article}
+
+\usepackage{hyperref}
+%\hypersetup{
+%colorlinks=false, % bool: Liens colorés
+%pdfborder={0 0 0} % Ne pas encadrer les liens
+%}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage[final]{pdfpages}
+\usepackage{rotating}
+\usepackage{eurosym}
+\usepackage{lscape}
+\usepackage{float}
+% définir les commandes ici
+
+% s'il y a beaucoup de commandes et de packages à inclure n'h&ésitez pas
+% à mettre tout ça dans un fichier include.tex et l'inclure
+% \input{include.tex}
+
+
+\begin{document}
+
+%------------------------------------- Page de titre
+\begin{titlepage}
+~
+\vfill
+\begin{center}
+\begin{Huge}
+PdC 2 : Dossier d'Initialisation\\
+\end{Huge}
+\vfill
+Elisa \bsc{ABIDH},
+Adrien \bsc{BROCHOT},   
+Martin \bsc{RICHARD},
+Jetmir \bsc{XHEMBULLA}
+\vfill
+\begin{Large}
+Septembre 2011
+\end{Large}
+\vfill
+\end{center}
+\vfill
+\end{titlepage}
+%----------------------------------------------------
+
+%--------------------------------- Table des matières
+\newpage
+\tableofcontents
+\newpage
+%----------------------------------------------- Plan
+
+\input{Contexte.tex}
+\newpage
+\input{Resultats.tex}
+\newpage
+\input{Phasage.tex}
+\newpage
+\input{Organisation.tex}
+\end{document}
