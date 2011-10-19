@@ -1,0 +1,54 @@
+\documentclass[a4paper]{article}
+
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=false, % bool: Liens colorés
+pdfborder={0 0 0} % Ne pas encadrer les liens
+}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage[final]{pdfpages}
+\usepackage{rotating}
+\usepackage{eurosym}
+\usepackage{lscape}
+\usepackage{float}
+\usepackage{color}
+\usepackage{colortbl}
+% définir les commandes ici
+
+% s'il y a beaucoup de commandes et de packages à inclure n'h&ésitez pas
+% à mettre tout ça dans un fichier include.tex et l'inclure
+% \input{include.tex}
+
+
+
+
+\begin{document}
+\title{PdC 2 : Architecture technique détaillée}
+\author{Elisa ABIDH, Adrien BROCHOT, Martin RICHARD, Jetmir XHEMBULLA}
+
+%------------------------------------- Page de titre
+\maketitle
+%\begin{titlepage}
+%~
+
+%\vfill
+%\begin{Large}
+%Septembre 2011
+%\end{Large}
+%\vfill
+%\end{titlepage}
+%----------------------------------------------------
+
+%--------------------------------- Table des matières
+\newpage
+\tableofcontents
+\newpage
+%----------------------------------------------- Plan
+
+\input{Concepts.tex}
+%\newpage
+
+\end{document}
