@@ -7,3 +7,7 @@
 #*
 .DS_STORE
 .mac
+*.out
+*.toc
+*.log
+*.aux
