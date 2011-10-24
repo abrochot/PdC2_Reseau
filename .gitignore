@@ -11,3 +11,6 @@
 *.toc
 *.log
 *.aux
+*.dvi
+*.ilg
+*.ind

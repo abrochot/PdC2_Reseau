@@ -1,11 +1,17 @@
-all: ArchiTechnique.pdf
+TARGET=ArchiTechnique.pdf
+INCLUDES=Concepts.tex Logiciel.tex Materiel.tex
+ASSETS=Existant.png Transition.png Cible.png
+TEXFILE=ArchiTechnique.tex
+
+all: $(TARGET)
 
 clean: cleantmp
-	rm ArchiTechnique.pdf 2> /dev/null
-	rm *.toc 2> /dev/null
+	rm -f $(TARGET) *.toc *.ind *.dvi
 
 cleantmp:
-	rm *.log *.out *.aux 2> /dev/null
+	rm -f *.log *.out *.aux *.ilg
 
-ArchiTechnique.pdf: ArchiTechnique.tex
-	pdflatex ArchiTechnique.tex
+$(TARGET): $(TEXFILE) $(INCLUDES) $(ASSETS)
+	#Once for toc, hyper-refs, etc, and once for good
+	pdflatex $(TEXFILE)
+	pdflatex $(TEXFILE)

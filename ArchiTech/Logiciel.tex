@@ -1,0 +1,53 @@
+\section{Logiciels utilisés}
+
+\paragraph{} Cette section décrira les logiciels qui seront utilisés dans le
+réseau ToIP dont nous décrivons l'architecture. Par logiciel, nous entendons
+discuter des systèmes d'exploitation, protocoles, applications et composants
+logiciels sur le serveur.
+
+\paragraph{} Plusieurs critères de sélection on été retenus, les voici :
+\begin{description}
+	\item[Interopérabilité] Les outils retenus doivent être compatibles avec le
+	réseau existant, qui est très hétérogène. Les logiciels doivent donc utiliser
+	des standards ouverts tant que possible.
+	\item[Popularité] La popularité d'une solution est un indicateur relativement
+	fiable de sa pérennité, de la facilité d'accès à des informations et des
+	compétences spécifiques pour l'utiliser.
+	\item[Solution Open-Source] Nous pensons que les solutions Open-Source
+	offrent généralement des bons niveau d'interopérabilité (ou à défaut, la
+	possibilité de modifier ces produits) et permettent de réduire les coûts.
+	Les solutions Open-Source sont par ailleurs moins souvent liées à du matériel
+	spécifique.
+	\item[Prix] Le prix des licences de logiciels est naturellement un facteur de
+	décision important pour deux solutions offrant des caractéristiques similaires
+	répondant à nos besoins.
+	\item[Complexité de la solution] Une solution complexe est une solution
+	difficile à déployer et à maintenir, et qui peut se révéler, à moyen
+	terme, coûteuse ou difficile à rendre fiable.
+\end{description}
+
+\subsection{Protocoles et codecs}
+
+\begin{description}
+	\item[RTP et RTCP] Les protocoles \ac{RTP} et \ac{RTCP} sont des protocoles
+	standards de communication en temps réel sur un réseau IP.
+	\item[SIP] \ac{SIP} est un protocole standard ouvert couramment utilisé en
+	téléphonie par IP. Il remplace progressivement le standard H.323, qui souffre
+	de limitations techniques et de failles de sécurité connues. SIP permet
+	également de gérer des sessions de visiophonie, de messagerie instantanée ou
+	des communications en mode conférence (plus de deux interlocuteurs).
+\end{description}
+
+\subsection{Call Manager}
+
+\paragraph{} Nous envisageons d'utiliser la solution
+Asterisk\footnote{\url{www.asterisk.org}}, qui répond très bien à nos critères
+de sélection.
+
+\paragraph{} Asterisk dispose de nombreuses fonctionnalités et dispose d'un
+mécanisme d'extensions très complet. Il est notamment compatible avec les
+Protocoles \ac{PRI} T0 et T1, pour se relier à une ligne \ac{RNIS}.
+
+\subsection{Passerelle IP}
+\subsection{Switch POE}
+\subsection{Téléphones IP}
