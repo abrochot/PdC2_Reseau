@@ -38,16 +38,27 @@ logiciels sur le serveur.
 	des communications en mode conférence (plus de deux interlocuteurs).
 \end{description}
 
-\subsection{Call Manager}
+\subsection{Call Manager et passerelle IP}
 
 \paragraph{} Nous envisageons d'utiliser la solution
 Asterisk\footnote{\url{www.asterisk.org}}, qui répond très bien à nos critères
-de sélection.
+de sélection. C'est une solution Open-Source reconnue qui intègre un vaste panel
+d'outil dédiés à la ToIP.
 
-\paragraph{} Asterisk dispose de nombreuses fonctionnalités et dispose d'un
-mécanisme d'extensions très complet. Il est notamment compatible avec les
-Protocoles \ac{PRI} T0 et T1, pour se relier à une ligne \ac{RNIS}.
+\paragraph{} Asterisk dispose de nombreuses fonctionnalités et d'un mécanisme
+d'extensions très complet. Il est notamment compatible avec les protocoles
+\ac{PRI} T0 et T1, pour se relier à une ligne analogique ou \ac{RNIS}. Cette
+suite logicielle sera donc en mesure de supporter l'architecture de transition
+et l'architecture cible sur un serveur disposant des interfaces matérielles
+nécessaires.
 
-\subsection{Passerelle IP}
-\subsection{Switch POE}
-\subsection{Téléphones IP}
+\paragraph{} Asterisk sera déployé sur une distribution GNU/Linux d'entreprise
+(type Redhat).
+
+\subsection{Terminaux}
+
+\paragraph{} Les autres équipements utiliseront généralement leurs firmwares
+d'origine. Cependant, certains terminaux téléphonique pourront être remplacés
+par des logiciels (clients SIP) installées sur un ordinateur si l'utilisateur le
+souhaite. Cette configuration n'est pas évaluée dans le cadre de cette étude et
+n'est pas recommandée, notamment pour des raisons de sécurité.

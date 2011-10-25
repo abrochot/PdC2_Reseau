@@ -1,20 +1,56 @@
 \section{Matériel retenu}
 
-\paragraph{} To be done.
+\paragraph{} Cette section discute du matériel qui supportera l'infrastructure
+du réseau ToIP sur le campus de l'INSA.
 
-\paragraph{} Plusieurs critères de sélection on été retenus, les voici :
-\begin{itemize}
-	\item Interopérabilité : les outils retenus doivent être compatibles avec le
+\paragraph{} Les principaux critères de sélection sont les suivants :
+\begin{description}
+	\item[Interopérabilité] Les outils retenus doivent être compatibles avec le
 	réseau existant, qui est très hétérogène. Le matériel doit donc pouvoir
 	travailler avec des produits commercialisés par la concurrence et permettre,
 	si besoin, d'accueillir des cartes et interfaces réseau supplémentaires.
-	\item Popularité
-	\item Solution Open-Source
-	\item Prix
-	\item Complexité de la solution
-\end{itemize}
+	\item[Prix] Le prix du matériel (à l'achat et pour la maintenance) sera
+  déterminant, mais sera surtout discuté dans le cadre d'appels d'offres.
+	\item[Popularité] La popularité d'une gamme est un indicateur sur
+  l'interopérabilité du matériel et donne une bonne garantie sur sa pérennité.
+\end{description}
 
 \subsection{Serveur}
-\subsection{Passerelle IP}
+
+\paragraph{} Nous optons pour un serveur garantissant une très haute
+disponibilité et une fiabilité accrue. Le serveur sera équipée de technologies
+matérielles conçues pour ces situations (RAID, fallbacks matériels, etc).
+
+\paragraph{} Par ailleurs, ce serveur sera équipé d'interfaces réseau dédiées à
+la connexion vers le réseau \ac{RNIS} ou analogique, telles que celles proposées
+par la branche Hardware de la société Asterisk. Les cartes de la série Hx8 sont
+des cartes hybrides disposant d'interfaces analogiques et numériques.
+
+\paragraph{} Nous estimons le coût d'achat d'un tel serveur à 5000 \euro HT.
+
 \subsection{Switch POE}
+
+\paragraph{} Les switchs qui doivent supporter le trafic de ToIP doivent être
+équipés de technologies \ac{POE}, qui permet d'alimenter les terminaux
+téléphoniques et éviter une interruption de service en cas de coupure
+d'électricité. Ces switchs doivent être manageables (switchs de niveau 3) pour
+permettre de créer des VLAN dédiés à la ToIP.
+
+\paragraph{} Un switch POE accueille généralement une part de ports ethernet
+équipés et des ports standards. Compte-tenu des investissements à prévoir de la
+part de la DSI, nous pouvons envisager d'opter pour des switchs équivalents à
+ceux qui sont prévus, mais disposant de l'option POE.
+
+\paragraph{} Il faut noter que des switchs POE nécessitent des locaux équipés de
+climatisation adaptée et un onduleur à batteries pour rester disponibles en cas
+de panne d'alimentation.
+
 \subsection{Téléphones IP}
+
+\paragraph{} Les téléphones IP qui seront déployés doivent supporter les
+protocoles que nous souhaitons utiliser, et principalement \ac{SIP}. La plupart
+des terminaux du marchés sont compatibles avec une telle technologie.
+
+\paragraph{} Les téléphones doivent aussi être en mesure de raccorder un
+ordinateur en "bout de ligne" pour éviter de devoir réinstaller des prises RJ45
+dans les locaux.
