@@ -15,6 +15,12 @@ du réseau ToIP sur le campus de l'INSA.
   l'interopérabilité du matériel et donne une bonne garantie sur sa pérennité.
 \end{description}
 
+\subsection{PABX}
+
+\paragraph{} Le \ac{PABX} existant sera conservé lors de la phase de transition.
+Nous veillerons à optimiser sa charge et nous assurer que les systèmes
+d'alimentation de secours en place sont toujours pleinement opérationnels.
+
 \subsection{Serveur}
 
 \paragraph{} Nous optons pour un serveur garantissant une très haute
@@ -26,7 +32,18 @@ la connexion vers le réseau \ac{RNIS} ou analogique, telles que celles proposé
 par la branche Hardware de la société Asterisk. Les cartes de la série Hx8 sont
 des cartes hybrides disposant d'interfaces analogiques et numériques.
 
+\paragraph{} Comme tout serveur critique, celui-ci est rattaché à un onduleur et
+une alimentation de secours.
+
 \paragraph{} Nous estimons le coût d'achat d'un tel serveur à 5000 \euro HT.
+
+\subsection{Équipements coeur de réseau}
+
+\paragraph{} Le matériel déployé au coeur du réseau sera généralement de la même
+nature que celui déployé pour le reste du réseau IP du campus. D'une manière
+générale, l'étude du matériel existant ou prévu à l'achat doit être reconsidéré
+en tenant compte du surplus de trafic engendré par les postes de téléphonies par
+IP envisagés dans le cadre de l'architecture cible.
 
 \subsection{Switch POE}
 
@@ -54,3 +71,6 @@ des terminaux du marchés sont compatibles avec une telle technologie.
 \paragraph{} Les téléphones doivent aussi être en mesure de raccorder un
 ordinateur en "bout de ligne" pour éviter de devoir réinstaller des prises RJ45
 dans les locaux.
+
+\paragraph{} Les téléphones sont alimentés grâce à la téchnologie \ac{POE} et ne
+nécessitent pas d'attention particulière pour garantir leur bon fonctionnement.
