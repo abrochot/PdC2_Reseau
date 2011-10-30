@@ -1,0 +1,72 @@
+\section{Analyse de l'existant}
+
+Cette partie du dossier d'architecture technique a pour objectif de dresser un état des lieux de l'actuelle architecture réseau présente sur le campus de l'INSA de Lyon. Ce projet doit permettre d'effectuer une transition entre l'architecture actuelle et une nouvelle architecture gérant la ToIP. L'enjeu dans la gestion de ce projet est que le campus de l'INSA possède déjà un réseau optique complexe et gérant de nombreux bâtiments. La mise en place d'une nouvelle architecture ne devra pas engendrer des coupures prolongées dans les différents bâtiments.
+
+\subsection{Etude Technique}
+
+\subsubsection{Réseau téléphonique}
+
+\paragraph{} Le réseau du campus utilise actuellement un réseau téléphonique analogique basé sur trois commutateurs internes (PABX). Le réseau téléphonique est donc actuellement complètement séparé du réseau de données et aucune gestion centralisée n'est installée pour contrôler ce réseau. Un réseau spécial pour les téléphones de secours a été mis en place afin d'être en mesure de contacter les services nécessaires en cas de sinistre sur le campus. Ces téléphones peuvent rester allumés jusqu'à 8 heures après une coupure de courant générale sur le campus. Ces téléphones sont analogiques également.
+
+\paragraph{} D'autres services du campus comme les alarmes, les téléphones d'ascenseurs, et FAXs utilisent un réseau téléphonique analogique qu'il ne sera pas possible de passer en ToIP à cause de leur ancienneté ou des réglementation en vigueur. De plus, le contrat d'entretien des PABX est assuré jusqu'en 2014.
+
+
+\subsubsection{Réseau de donnée}
+
+\paragraph{} Le réseau de données de l'INSA doit fournir de nombreux services variés : de l'hébergement web, service d'authentification sur le réseau ROCAD, mail... Les équipements actuels sont très vétustes et les divers services actuels gérants le réseau ne connaissent pas la liste complète et l'emplacement des équipements installés dans les différents locaux. La vétusté du matériel entraine de nombreux problèmes diminuant la qualité de service et risquant une interruption de ce dernier en cas de défaillance critique. Les équipements sont souvent sur-exploités et atteignent jusqu'à 90\% de charge.
+
+\paragraph{} Certains services critiques tels que la video surveillance passent également par ce réseau de donnée. Ces services ne peuvent pas s'effectuer dans la limite des contraintes de sécurité normales dans le réseau de donnée actuel.
+
+\paragraph{} Les équipements passifs du réseau de donnée sont pour la plupart vieux d'une quarantaine d'année. La technologie utilisée est donc généralement dépassée et procure un service limité.
+
+\paragraph{} Le campus dispose actuellement d'une unique boucle optique câblée à l'aide de fibre multimode ne permettant le débit gigabit que sur une distance de 500m. Elle représente le principal problème du réseau. Elle est au cœur de ce dernier et ne permet pas de remplir les contraintes de sécurité auxquelles ce réseau devrait être soumis. Il faut par conséquent prévoir son remplacement. les fourreaux actuels n'étant plus aux normes, il sera préférable de créer deux toutes nouvelles boucles optiques et veiller cette fois à prévoir les évolution future et garantir les possibilités d'évolutions futures. Cette boucle optique permet le transfert des données dans tout les campus jusqu'au bas de chaque bâtiment. le CISR en est l'actuel responsable.
+
+\paragraph{} Pour les bâtiments intérieurs, la plupart disposent de plusieurs locaux techniques. Un fédérateur permet de transformer la liaison optique en Ethernet et répartir ensuite vers les différents locaux techniques les données. L'équipement actif est déjà en cours de rénovation par la DSI de l'INSA. Le but est encore une fois de rendre la maintenance de ces équipement plus facile et améliorer la qualité de service. L'équipement passif, quant à lui est à peu près maitrisé.
+
+\paragraph{} Chaque service doit gérer son raccordement au local technique auquel il est raccordé (en général un local technique d'étage). Ceci entraine une grande disparité des équipements utilisés sur le réseau. Cette disparité rend l'ensemble du réseau difficile à maintenir : chaque équipement ayant un âge différent, un modèle différent...
+
+
+\subsection{Etude organisationnelle}
+
+\paragraph{• SIDD :} le Service Interuniversitaire du Domaine de la Doua s'occupe de piloter les prochains projets portés sur le campus et gère la maintenance extérieure.
+
+\paragraph{• DIRPAT :} La Direction du Patrimoine, assure la maintenance des équipements et bâtiments du campus. Elle est également en charge des réseaux electriques.
+
+\paragraph{• CISR :} le Centre Inter-établissements pour les Services Réseaux couvre à la fois l'université lyon 1 et l'INSA sur le campus de la Doua. Cette entité est divisée en 2 équipes : un équipe de 7 personnes qui gère les installation inter campus, qui est en charge des fibres présentes sur le campus. Elle n'a aucune autorité dans les bâtiments. La deuxième équipe est composée également de 7 personnes rattachées à l'université Lyon 1. Elle s'est occupé de la gestion des installations internes aux bâtiments des 14 campus, du déploiement de la ToIP et du réseau WIFI de l'Université Lyon 1.
+
+\paragraph{• DSI :} Cette entité est directement rattachée à l'INSA, elle est en charge des équipements internes aux différents bâtiments reliés au réseau. Elle est en charge des équipements actifs et passifs dans les bâtiments, elle actuellement en phase de redéploiement d'équipements afin d'uniformiser les différents locaux techniques et de modernisr l'ensemble de l'infrastructure.
+
+Il n'y a actuellement aucun outil de travail collaboratif et les échanges entre les différentes entités sont très variables. La DSI et la DIRPAT communiquent assez facilement, quelques relations non formelles se font entre la DSI et le CISR.
+
+
+\subsection{Etude financière}
+
+\paragraph{} Ce type de projet représentant un investissement conséquent pour le campus, il convient d'étudier la situation financière de la structure cible afin d'adapter notre solution à ses moyens actuels voire de repousser les dates des début de projet afin d'attendre un moment plus propice et éviter de sacrifier de la technique dans le seul but de gagner quelques années qui seront bien vite rattrapées si la maintenance de la nouvelle infrastructure pose des problèmes.
+
+\paragraph{} L'INSA est actuellement dans une période de grande difficultés financières, la gestion financière étant précédemment quasi-inexistante, le retard accumulé dans cette gestion a plongé l'INSA dans de grands problèmes financiers. Une nouvelle équipe a récemment pris la tête de la gestion des finances et tente de changer les choses mais la route sera longue avant que tous les problèmes soient réglés.
+
+\paragraph{} Les principales solutions adoptées étant les restrictions budgétaires, il sera dur de prouver l'intérêt du lancement de notre projet : l'informatique n'étant généralement pas considéré comme prioritaire dans ce genre de situation. Le réseau actuel fonctionne, presque, convenablement, sa rénovation risque de passer pour un luxe que l'école ne peut pas s'offrir. 
+
+\paragraph{} Des partenariats avec certaines entreprises pourraient aider à faire baisser les prix de nombreux équipements, l'INSA a, par chance, un partenariat avec le constructeur cisco qui permettra certainement d'obtenir des prix assez bas pour les différents équipements nécessaires (switchs, équipements VoIP,...)
+
+\paragraph{} De plus, actuellement, tous les raccordements au réseau de donnée du campus est à la charge de chaque service, aucun abonnement n'existe. Seul le téléphone nécessite un abonnement, indépendant. La création d'une nouvelle architecture modifiera la gouvernance du réseau avec pour objectif de centraliser cette gouvernance et permettra d'imposer un abonnement mensuel afin de mieux suivre les différents services et pouvoir plus simplement monitorer le réseau.
+
+
+
+
+
+
+\subsection{Projets importants du campus}
+
+\paragraph{} Le campus de l'INSA est en pleine phase de rénovation. C'est dans cette phase que s'inscrit le présent projet.
+
+\paragraph{• Rénovation du réseau :} La DSI avait entrepris la rénovation des parties actives des équipements du campus mais en raison de la situation actuelle du budget de l'INSA, ce projet a été mis en pause.
+
+\paragraph{• liaison entre Bat Jacquard et Bat Baconier :} Ces deux bâtiments sont les sièges respectivement de la DSI et du CISR, une liaison par fibre monomode doit être effectuée entre ces deux bâtiments.
+
+\paragraph{• Plan Campus :} C'est un projet gouvernemental qui a pour but la rénovation des établissement d'enseignements supérieur afin de tous les remettre aux normes (electricité, eau, chauffage). Ce projet ne concerne pas les infrastructures réseau mais peut permettre d'utiliser les travaux dans le sol qu'il effectuera pour nous aider à déployer nos infrastructures.
+
+\paragraph{• Réorganisation des services :} Une réorganisation des différents services de l'INSA est en cours, cette réorganisation bloque l'avancée de la rénovation car les différents services concernés par le déménagement refusent en général de payer la rénovation de leurs installation car ils sont sur le point de les quitter.
+
+
+

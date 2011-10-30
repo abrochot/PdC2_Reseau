@@ -1,14 +1,12 @@
 \documentclass[a4paper]{article}
+\input{nation}
 
 \usepackage{hyperref}
 \hypersetup{
 colorlinks=false, % bool: Liens colorés
 pdfborder={0 0 0} % Ne pas encadrer les liens
 }
-\usepackage[utf8]{inputenc}
-\usepackage[francais]{babel}
-\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
-\usepackage{graphicx}
+
 \usepackage[final]{pdfpages}
 \usepackage{rotating}
 \usepackage{eurosym}
@@ -24,6 +22,9 @@ pdfborder={0 0 0} % Ne pas encadrer les liens
 % à mettre tout ça dans un fichier include.tex et l'inclure
 % \input{include.tex}
 
+\lhead{PdC2 - Dossier d'Architecture}
+\rhead{\includegraphics [width=1.5cm]{insa-couleur.jpg}}
+\rfoot{\thepage\ de \pageref{LastPage}}
 
 
 
@@ -49,7 +50,8 @@ pdfborder={0 0 0} % Ne pas encadrer les liens
 \tableofcontents
 \newpage
 %----------------------------------------------- Plan
-
+\input{Existant.tex}
+\newpage
 \input{Concepts.tex}
 \newpage
 \input{Logiciel.tex}
