@@ -1,0 +1,31 @@
+\section{Déploiement}
+
+\subsection{Volumétrie}
+
+\subsection{Réseau}
+
+\paragraph{} L'installation du réseau de VoIP implique de mettre en place une
+stratégie de sécurité tenant compte de ses spécificités. Il nous semble
+raisonnable de cloisonner le sous-réseau voix au niveau logique, et donc de
+placer l'ensemble des interfaces de VoIP dans un sous-réseau virtuel (VLAN)
+dédié, afin de dissocier le réseau de données du réseau voix.
+
+\paragraph{} Ce VLAN sera un VLAN de niveau 2 ou plus (vlan par adresse MAC),
+car des ordinateurs seront raccordés en "bout de ligne" à travers le pont fourni
+sur les téléphones.
+
+\paragraph{} Par ailleurs, afin de garantir ce cloisonnement, des règles de
+pare-feu contrôleront l'accès au sous-réseau voix. Ces règles limiteront
+l'accès au réseau aux protocoles de VoIP supportés (voir la section
+\ref{logiciel}) et aux canaux de données qui peuvent être utilisés par les
+terminaux pour se mettre à jour (des réglages fins peuvent être envisagés avec
+les spécifications des constructeurs).
+
+\paragraph{} TODO adressage ?
+
+\subsection{Répartition physique}
+
+\paragraph{} De nombreuses contraintes physiques, comme la longueur limite d'une
+ligne (du switch à la prise de l'utilisateur) ou la nécessité de climatiser les
+locaux accueillant les switchs \ac{POE}, nous devons réfléchir à une restructure
+des locaux techniques.
