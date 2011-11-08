@@ -1,5 +1,5 @@
 TARGET=ArchiTechnique.pdf
-INCLUDES=Concepts.tex Logiciel.tex Materiel.tex
+INCLUDES=Acronymes.tex Boucles.tex Concepts.tex Logiciel.tex Materiel.tex Deploiement.tex Existant.tex main.tex
 ASSETS=Existant.png Transition.png Cible.png
 TEXFILE=ArchiTechnique.tex
 

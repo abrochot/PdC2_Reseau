@@ -1,12 +1,5 @@
 \section{Déploiement}
 
-\subsection{Volumétrie}
-
-\paragraph{} Cette sous-section décrit une estimation du volume des postes et
-équipements qui sont couverts par cette étude.
-
-\paragraph{} TODO tableau...
-
 \subsection{Réseau}
 
 \paragraph{} L'installation du réseau de VoIP implique de mettre en place une
@@ -32,5 +25,119 @@ les spécifications des constructeurs).
 
 \paragraph{} De nombreuses contraintes physiques, comme la longueur limite d'une
 ligne (du switch à la prise de l'utilisateur) ou la nécessité de climatiser les
-locaux accueillant les switchs \ac{POE}, nous devons réfléchir à une restructure
-des locaux techniques.
+locaux accueillant les switchs \ac{POE}, nous devons réfléchir à une
+restructuration des locaux techniques.
+
+\paragraph{} D'une manière générale, on peut considérer qu'on local technique
+que nous avons pu placer judicieusement (c'est à dire, généralement, au centre
+d'un bâtiment) permettra d'être un point de départ pour le câblage de trois
+étages : celui du dessous, celui qui accueille le local et ce lui du dessus.
+
+\subsection{Volumétrie}
+
+\paragraph{} Cette sous-section décrit une estimation du volume des postes et
+équipements qui sont couverts par cette étude.
+
+\paragraph{} Nous considérons qu'il faut en moyenne 40 prises dans les étages
+des bâtiments d'enseignement et recherche, et les bâtiments de services communs
+(qu'on regroupera dans une catégorie A).
+Le grand restaurant accueille également des bureaux, on considérera
+qu'il nécessite 40 prises par bâtiment. Les résidences, les locaux sportifs et
+autres résidences nécessitent en moyenne 10 prises au total (on les regroupe
+    dans une catégorie B).
+
+\paragraph{} Le tableau \ref{table_switchs} estime le nombre de switchs \ac{POE}
+nécessaires, en considérant qu'un switch est équipé de 24 ports \ac{POE} (soit
+deux switchs par étage d'un bâtiment de catégorie A).
+
+\begin{table}[p]
+  \caption{\label{table_switchs} Calcul du nombre de switchs nécessaires}
+  \begin{tabular}{|l|l|c|m{4cm}|c|}
+    \hline
+    Catégorie & Nature & Nombre & Nombre de switch \ac{POE} (par bâtiment) & Nombre
+    de switch total \\
+    \hline
+    B & Résidences  & 11 & 1 & 11 \\
+    B & Sport       & 3  & 1 & 3  \\
+    B & Restaurants & 1  & 1 & 1  \\
+    \hline
+    B & Total       & 15 &       & 15 \\
+    \hline
+      & Grand restaurant & 1 & 2 & 2 \\
+    \hline
+    A & 2 étages         & 9 & 4 & 36 \\
+    A & 3 étages         & 9 & 6 & 54 \\
+    A & plus de 3 étages & 2 & 8 & 16 \\
+    \hline
+    A & Total            & 20 &  & 106 \\
+    \hline
+    \hline
+      & \bf{Grand total} & & & \bf{123} \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\paragraph{} On compte un onduleur et une baie de brassage par local technique. Le tableau
+\ref{table_locaux} estime le nombre de locaux techniques nécessaires.
+
+\begin{table}[p]
+  \caption{\label{table_locaux} Calcul du nombre de locaux techniques nécessaires}
+  \begin{tabular}{|l|c|m{4cm}|c|}
+    \hline
+    Nature & Nombre & Nombre de locaux (par bâtiment) & Nombre de locaux total \\
+    \hline
+    Résidences  & 11 & 1 & 11 \\
+    Sport       & 3  & 1 & 3 \\
+    Restaurants & 1  & 1 & 1 \\
+    \hline
+    Total       & 15 &   & 15 \\
+    \hline
+    Grand restaurant & 1 & 1 & 1 \\
+    \hline
+    2 étages         & 9 & 1 & 9 \\
+    3 étages         & 9 & 1 & 9 \\
+    plus de 3 étages & 2 & 2 & 4 \\
+    \hline
+    Total            & 20 & & 22 \\
+    \hline
+    \hline
+    \bf{Grand total} & & & \bf{38} \\
+    \bf{Onduleurs} & & & \bf{38} \\
+    \bf{Baies de brassage} & & & \bf{38} \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\paragraph{} On considérera en moyenne une longueur de câble de 40m par prise.
+Le \ref{table_cable} estime le nombre de prises, de téléphones et la longueur de
+câble nécessaire.
+
+\begin{table}[p]
+  \caption{\label{table_cable} Calcul de la longueur de câble nécessaire}
+  \begin{tabular}{|l|l|c|m{4cm}|c|}
+    \hline
+    Catégorie & Nature & Nombre & Nombre de prises (par bâtiment) & Nombre
+    de prises total \\
+    \hline
+    B & Résidences & 11 & 10 & 110 \\
+    B & Sport & 3 & 10 & 30 \\
+    B & Restaurants & 1 & 10 & 10 \\
+    \hline
+    B & Total & 15 & & 150 \\
+    \hline
+      & Grand restaurant & 1 & 40 & 40 \\
+    \hline
+    A & 2 étages         & 9 & 80  & 720 \\
+    A & 3 étages         & 9 & 120 & 1080 \\
+    A & plus de 3 étages & 2 & 160 & 320 \\
+    \hline
+    A & Total            & 20 & & 2120 \\
+    \hline
+    \hline
+      & \bf{Grand total} & & & \bf{2310} \\
+      & \bf{Téléphones IP} & & & \bf{2310} \\
+      & \bf{Longueur de câble} & & & \bf{92,4 km} \\
+    \hline
+  \end{tabular}
+\end{table}
+
