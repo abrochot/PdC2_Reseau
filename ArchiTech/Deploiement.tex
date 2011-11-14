@@ -8,9 +8,9 @@ raisonnable de cloisonner le sous-réseau voix au niveau logique, et donc de
 placer l'ensemble des interfaces de VoIP dans un sous-réseau virtuel (VLAN)
 dédié, afin de dissocier le réseau de données du réseau voix.
 
-\paragraph{} Ce VLAN sera un VLAN de niveau 2 ou plus (vlan par adresse MAC),
-car des ordinateurs seront raccordés en "bout de ligne" à travers le pont fourni
-sur les téléphones.
+\paragraph{} Ce VLAN sera un VLAN de niveau 2 ou plus. L'appartenance à un VLAN
+sera déterminé par les ports de switchs et les téléphones seront identifiés par
+le addresse MAC, pour des raisons de sécurité.
 
 \paragraph{} Par ailleurs, afin de garantir ce cloisonnement, des règles de
 pare-feu contrôleront l'accès au sous-réseau voix. Ces règles limiteront
@@ -33,7 +33,7 @@ restructuration des locaux techniques.
 \paragraph{} D'une manière générale, on peut considérer qu'on local technique
 que nous avons pu placer judicieusement (c'est à dire, généralement, au centre
 d'un bâtiment) permettra d'être un point de départ pour le câblage de trois
-étages : celui du dessous, celui qui accueille le local et ce lui du dessus.
+étages : celui du dessous, celui qui accueille le local et celui du dessus.
 
 \subsection{Volumétrie}
 
@@ -49,8 +49,9 @@ autres résidences nécessitent en moyenne 10 prises au total (on les regroupe
     dans une catégorie B).
 
 \paragraph{} Le tableau \ref{table_switchs} estime le nombre de switchs \ac{POE}
-nécessaires, en considérant qu'un switch est équipé de 24 ports \ac{POE} (soit
-deux switchs par étage d'un bâtiment de catégorie A).
+nécessaires, en considérant qu'un switch est équipé de 24 ports \ac{POE} et 24
+ports neutres. Il n'est généralement pas nécessaire d'équiper toutes les prises
+de \ac{POE}. Un switch par étage est donc suffisant.
 
 \begin{table}[p]
   \caption{\label{table_switchs} Calcul du nombre de switchs nécessaires}
@@ -65,16 +66,16 @@ deux switchs par étage d'un bâtiment de catégorie A).
     \hline
     B & Total       & 15 &       & 15 \\
     \hline
-      & Grand restaurant & 1 & 2 & 2 \\
+      & Grand restaurant & 1 & 1 & 1 \\
     \hline
-    A & 2 étages         & 9 & 4 & 36 \\
-    A & 3 étages         & 9 & 6 & 54 \\
-    A & plus de 3 étages & 2 & 8 & 16 \\
+    A & 2 étages         & 9 & 2 & 18 \\
+    A & 3 étages         & 9 & 3 & 27 \\
+    A & plus de 3 étages & 2 & 4 & 8 \\
     \hline
-    A & Total            & 20 &  & 106 \\
+    A & Total            & 20 &  & 53 \\
     \hline
     \hline
-      & \bf{Grand total} & & & \bf{123} \\
+      & \bf{Grand total} & & & \bf{69} \\
     \hline
   \end{tabular}
 \end{table}
